@@ -1,6 +1,6 @@
 name: flutter_grid_template
 description: A new Flutter package inspired in css grid template.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/Tedyz/flutter_grid_template
 
 environment:
