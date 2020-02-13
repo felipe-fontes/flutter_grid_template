@@ -3,9 +3,12 @@
 # Flutter Grid Template  
   
 
-This is a plugin for flutter inspired in the CSS grid template.
-It consists in two Widgets GridTemplate and GridTemplateResponsive.
-and every cell is container that holds your widget.
+
+This is a plugin for flutter inspired in the CSS grid template.  
+It consists of two Widgets GridTemplate and GridTemplateResponsive.  
+and every cell is a container that holds your widget.  
+  
+The main idea is to help you create a responsive flutter app without the need to use a completely different widget for different screen sizes.
 
 ## Usage  
   
@@ -51,10 +54,9 @@ GridTemplate(
 		),  
 	],  
 );  
-```  
+```
   
-
-!https://imgur.com/a/5fPi1og  
+<img src="https://i.imgur.com/Y7eEm5k.png" width="400">
   
 
 ## Row and Column Size  
@@ -160,9 +162,9 @@ GridTemplateResponsive(
 	],
 )
 ```
+<img src="https://i.imgur.com/xOUbPyt.png" width="400">
+<img src="https://i.imgur.com/gdqlEPu.png" width="400">
 
-!https://imgur.com/gdqlEPu
-!https://imgur.com/xOUbPyt
  
 ## Issues and feedback  
 Please file [issues](https://github.com/Tedyz/flutter_grid_template/issues/new)  
