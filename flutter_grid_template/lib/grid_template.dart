@@ -216,12 +216,6 @@ class PrePositioned {
       height: height,
       child: Container(
         key: child.key,
-        color: Color.fromARGB(
-          255,
-          Random().nextInt(255),
-          Random().nextInt(255),
-          Random().nextInt(255),
-        ),
         child: child,
       ),
     );
