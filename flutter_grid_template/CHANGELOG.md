@@ -1,3 +1,7 @@
+## [0.0.5] - 03/12/2020.
+
+* Adding debugPaint to the Readme File
+
 ## [0.0.4] - 03/12/2020.
 
 * Adding debugPaint
