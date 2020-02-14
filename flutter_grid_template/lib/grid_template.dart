@@ -8,6 +8,7 @@ class GridTemplate extends StatelessWidget {
     @required this.children,
     @required this.rowsSize,
     @required this.columnsSize,
+    this.debugPaint = false,
   }) : super(key: key);
 
   final List<String> template;
@@ -16,6 +17,7 @@ class GridTemplate extends StatelessWidget {
   final String rowsSize;
   final List<double> _rowsSize = List<double>();
   final List<double> _columnsSize = List<double>();
+  final bool debugPaint;
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +92,8 @@ class GridTemplate extends StatelessWidget {
       }
     }
 
-    widgets = preWidgets.map((p) => p.createWidget()).toList();
+    widgets =
+        preWidgets.map((p) => p.createWidget(debugPaint: debugPaint)).toList();
 
     return widgets;
   }
@@ -208,7 +211,7 @@ class PrePositioned {
   double height;
   Widget child;
 
-  Positioned createWidget() {
+  Positioned createWidget({bool debugPaint = false}) {
     return Positioned(
       top: top,
       left: left,
@@ -217,6 +220,14 @@ class PrePositioned {
       child: Container(
         key: child.key,
         child: child,
+        color: debugPaint
+            ? Color.fromARGB(
+                255,
+                Random().nextInt(255),
+                Random().nextInt(255),
+                Random().nextInt(255),
+              )
+            : null,
       ),
     );
   }

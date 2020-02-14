@@ -6,10 +6,12 @@ class GridTemplateResponsive extends StatelessWidget {
     Key key,
     @required this.templates,
     @required this.children,
+    this.debugPaint = false,
   }) : super(key: key);
 
   final List<TemplateSelector> templates;
   final List<Widget> children;
+  final bool debugPaint;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class GridTemplateResponsive extends StatelessWidget {
       selected = possibles.reduce((a, b) => a.maxWidth > b.maxWidth ? b : a);
     }
 
-    return selected.getGridTemplate(children);
+    return selected.getGridTemplate(children, debugPaint: debugPaint);
   }
 }
 
@@ -47,10 +49,12 @@ class TemplateSelector {
   final String columnsSize;
   final String rowsSize;
 
-  getGridTemplate(List<Widget> children) => GridTemplate(
+  getGridTemplate(List<Widget> children, {bool debugPaint = false}) =>
+      GridTemplate(
         children: children,
         template: template,
         rowsSize: rowsSize,
         columnsSize: columnsSize,
+        debugPaint: debugPaint,
       );
 }

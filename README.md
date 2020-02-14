@@ -27,36 +27,36 @@ Add the following import to your Dart code:
 import 'package:flutter_grid_template/grid_template.dart';  
 ```  
 ```dart  
-GridTemplate(  
-	key: Key('b'),  
-	template: [  
-		'title sub1',  
-		'sub3 sub4',  
-	],  
-	rowsSize: '1fr 1fr',  
-	columnsSize: '1fr 1fr',  
-	children: <Widget>[  
-		Text(  
-			'sub grid text 1',  
-			key: Key('sub1'),  
-		),  
-		Text(  
-			'sub grid text 2',  
-			key: Key('sub2'),  
-		),  
-		Text(  
-			'sub grid text 3',  
-			key: Key('sub3'),  
-		),  
-		Text(  
-			'sub grid text 4',  
-			key: Key('sub4'),  
-		),  
-	],  
+GridTemplate(
+	debugPaint:  true,
+	template: [
+		'logo header',
+		'leftContent rightContent',
+	],
+	rowsSize:  '30% 70%',
+	columnsSize:  '2fr 1fr',
+	children:  <Widget>[
+		Text(
+			'Logo Area',
+			key:  Key('logo'),
+		),
+		Text(
+			'header Area',
+			key:  Key('header'),
+		),
+		Text(
+			'Left Content Area',
+			key:  Key('leftContent'),
+		),
+		Text(
+			'Right Content Area',
+			key:  Key('rightContent'),
+		),
+	],
 );  
 ```
   
-<img src="https://i.imgur.com/Y7eEm5k.png" width="400">
+<img src="https://i.imgur.com/Op3A52z.png" width="400">
   
 
 ## Row and Column Size  
@@ -112,6 +112,7 @@ You need to pass a TemplateSelector that you can use it to pass the ``` maxWidth
 
 ```dart
 GridTemplateResponsive(
+	debugPaint:  true,
 	templates: [
 		TemplateSelector(
 			template: [
